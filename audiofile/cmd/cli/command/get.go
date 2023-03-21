@@ -44,7 +44,7 @@ func (cmd *GetCommand) Run() error {
 		return fmt.Errorf("missing id")
 	}
 	params := "id=" + url.QueryEscape(cmd.id)
-	path := fmt.Sprintf("http://localhost/request?%s", params)
+	path := fmt.Sprintf("http://localhost:8000/request?%s", params)
 	payload := &bytes.Buffer{}
 	client := cmd.client
 

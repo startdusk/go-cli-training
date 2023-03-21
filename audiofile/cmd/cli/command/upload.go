@@ -46,7 +46,7 @@ func (cmd *UploadCommand) Run() error {
 		return fmt.Errorf("missing filename")
 	}
 	fmt.Println("Uploading", cmd.filename, "...")
-	url := "http://localhost/upload"
+	url := "http://localhost:8000/upload"
 	payload := &bytes.Buffer{}
 	multipartWriter := multipart.NewWriter(payload)
 	file, err := os.Open(cmd.filename)

@@ -31,7 +31,7 @@ func (cmd *ListCommand) ParseFlags(flags []string) error {
 }
 
 func (cmd *ListCommand) Run() error {
-	path := "http://localhost/list"
+	path := "http://localhost:8000/list"
 	payload := &bytes.Buffer{}
 	client := cmd.client
 
